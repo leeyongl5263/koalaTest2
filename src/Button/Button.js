@@ -32,7 +32,7 @@ const defaultProps = {
 };
 
 const Button = props => {
-  return <ButtonWithStyle {...props}>{props.children}</ButtonWithStyle>;
+  return <Button {...props}>{props.children}</Button>;
 };
 
 // const Button = React.forwardRef((props, ref) => {
