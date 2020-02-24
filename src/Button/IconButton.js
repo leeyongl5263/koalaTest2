@@ -12,7 +12,7 @@ const IconDefaultProps = {
   withBorder: false
 };
 
-function IconButton() {
+function IconButton({props, ref}) {
   return React.forwardRef((props, ref) => {
     return (
       <IconButtonWithStyle {...props} ref={ref}>

@@ -17,7 +17,7 @@ const ProfileDefaultProps = {
   fontColor: "black"
 };
 
-function ProfileButton() {
+function ProfileButton({props, ref}) {
   return React.forwardRef((props, ref) => {
     return (
       <ProfileButtonWithStyle {...props} ref={ref}>

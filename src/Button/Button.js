@@ -31,7 +31,13 @@ const defaultProps = {
   size: ButtonSizes.MEDIUM
 };
 
-function Button() {
+Button.Kinds = Kinds;
+Button.displayName = "Button";
+Button.propTypes = propTypes;
+Button.defaultProps = defaultProps;
+
+
+export function Button({props, ref}) {
   return React.forwardRef((props, ref) => {
     return (
       <ButtonWithStyle ref={ref} {...props}>
@@ -41,9 +47,4 @@ function Button() {
   });
 }
 
-Button.Kinds = Kinds;
-Button.displayName = "Button";
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
 
-export default Button;

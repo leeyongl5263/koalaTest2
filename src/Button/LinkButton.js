@@ -11,7 +11,7 @@ const LinkDefaultProps = {
   hasUnderLine: true
 };
 
-function LinkButton() {
+function LinkButton({props, ref}) {
   return React.forwardRef((props, ref) => {
     if (props.target == "_blank") {
       LinkButton.rel = "noopener noreferrer";

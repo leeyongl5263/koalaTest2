@@ -19,7 +19,7 @@ const ListDefaultProps = {
   children: null
 };
 
-function ProfileButtonList() {
+function ProfileButtonList({props, ref}) {
   return React.forwardRef((props, ref) => {
     return (
       <ListWithStyle {...props} ref={ref}>
