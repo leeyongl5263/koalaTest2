@@ -31,9 +31,9 @@ const defaultProps = {
   size: ButtonSizes.MEDIUM
 };
 
-const Button = props => {
-  return <Button {...props}>{props.children}</Button>;
-};
+// const Button = props => {
+//   return <Button {...props}>{props.children}</Button>;
+// };
 
 // const Button = React.forwardRef((props, ref) => {
 
@@ -44,9 +44,22 @@ const Button = props => {
 //   );
 // });
 
+// Button.Kinds = Kinds;
+// Button.displayName = "Button";
+// Button.propTypes = propTypes;
+// Button.defaultProps = defaultProps;
+
+// export default Button;
+const Button = React.forwardRef((props, ref) => {
+  return (
+    <ButtonWithStyle ref={ref} {...props} >
+      {props.children}
+    </ButtonWithStyle>
+  );
+});
+
 Button.Kinds = Kinds;
 Button.displayName = "Button";
-Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
 
-export default Button;
+export { Button };
