@@ -36,15 +36,18 @@ Button.displayName = "Button";
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
 
-
-export function Button({props, ref}) {
-  return React.forwardRef((props, ref) => {
-    return (
-      <ButtonWithStyle ref={ref} {...props}>
-        {props.children}
-      </ButtonWithStyle>
-    );
-  });
+export default function Button() {
+  return (<Button>Test</Button>);
 }
+
+// export default function Button({props, ref}) {
+//   return React.forwardRef((props, ref) => {
+//     return (
+//       <ButtonWithStyle ref={ref} {...props}>
+//         {props.children}
+//       </ButtonWithStyle>
+//     );
+//   });
+// }
 
 
