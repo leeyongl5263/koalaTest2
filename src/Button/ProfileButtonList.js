@@ -1,30 +1,33 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 import ListWithStyle from "./ProfileButtonList.styles";
 
 const ListTypes = {
-    /** The width of every column. */
-    columnWidth: PropTypes.string,
+  /** The width of every column. */
+  columnWidth: PropTypes.string,
 
-    /** The amount of the children. */
-    amount: PropTypes.number,
+  /** The amount of the children. */
+  amount: PropTypes.number,
 
-    /** Body content of the list. */
-    children: PropTypes.node
+  /** Body content of the list. */
+  children: PropTypes.node
 };
 
 const ListDefaultProps = {
-    columnWidth: "30px",
-    amount: 3,
-    children: null
+  columnWidth: "30px",
+  amount: 3,
+  children: null
 };
 
-const ProfileButtonList = React.forwardRef((props, ref) => {
+function ProfileButtonList() {
+  return React.forwardRef((props, ref) => {
     return (
-        <ListWithStyle {...props} ref={ref} >
-            {props.children}
-        </ListWithStyle>);
-});
+      <ListWithStyle {...props} ref={ref}>
+        {props.children}
+      </ListWithStyle>
+    );
+  });
+}
 
 ProfileButtonList.propTypes = ListTypes;
 ProfileButtonList.defaultProps = ListDefaultProps;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 import ButtonWithStyle from "./Button.styles";
 
@@ -31,14 +31,15 @@ const defaultProps = {
   size: ButtonSizes.MEDIUM
 };
 
-const Button = React.forwardRef((props, ref) => {
-  
-  return (
-    <ButtonWithStyle ref={ref} {...props} >
-      {props.children}
-    </ButtonWithStyle>
-  );
-});
+function Button() {
+  return React.forwardRef((props, ref) => {
+    return (
+      <ButtonWithStyle ref={ref} {...props}>
+        {props.children}
+      </ButtonWithStyle>
+    );
+  });
+}
 
 Button.Kinds = Kinds;
 Button.displayName = "Button";
@@ -46,5 +47,3 @@ Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
 
 export default Button;
-
-
